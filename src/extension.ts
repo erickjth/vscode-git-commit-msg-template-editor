@@ -28,8 +28,9 @@ export function activate(context: vscode.ExtensionContext) {
 				fs.writeFileSync(templateFilePath, '');
 			}
 
+			// cd to wsPath
+			process.chdir(wsPath);
 			// Run command to set the file in git/config with node
-			// git config --local commit.template .git/commit_msg_template.txt
 			await execPromise(`git config --local commit.template ${templateFilePath}`);
 
 			const content = fs.readFileSync(templateFilePath, 'utf8');
