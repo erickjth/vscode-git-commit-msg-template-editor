@@ -2,6 +2,10 @@
 import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
+import{ promisify } from 'node:util';
+import { exec } from 'child_process';
+
+const execPromise = promisify(exec);
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -23,6 +27,10 @@ export function activate(context: vscode.ExtensionContext) {
 			if (!fs.existsSync(templateFilePath)) {
 				fs.writeFileSync(templateFilePath, '');
 			}
+
+			// Run command to set the file in git/config with node
+			// git config --local commit.template .git/commit_msg_template.txt
+			await execPromise(`git config --local commit.template ${templateFilePath}`);
 
 			const content = fs.readFileSync(templateFilePath, 'utf8');
 

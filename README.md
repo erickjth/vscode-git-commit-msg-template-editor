@@ -10,3 +10,10 @@ Create/Update the commit message template file for your git repository.
 3. Press Enter to save the template.
 
 
+## Changelog
+
+### 0.0.2
+- Added support for updating the commit message template file.
+
+### 0.0.1
+- Initial release of the extension.
