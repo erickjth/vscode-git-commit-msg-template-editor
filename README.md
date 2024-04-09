@@ -13,7 +13,7 @@ Create/Update the commit message template file for your git repository.
 ## Changelog
 
 ### 0.0.3
-- Misc internal changes / clean up repository.
+- Add icon / Misc internal changes / clean up repository.
 
 ### 0.0.2
 - Added support for updating the commit message template file.
