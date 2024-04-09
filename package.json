@@ -7,7 +7,7 @@
     "url": "https://github.com/erickjth/vscode-git-commit-msg-template-editor"
   },
   "version": "0.0.2",
-  "publisher": "Erick Torres",
+  "publisher": "etorresh",
   "engines": {
     "vscode": "^1.77.0"
   },
